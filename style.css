@@ -1,0 +1,272 @@
+body {
+    background: url('./body-bg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    width: 800px;
+    height: 500px;
+    border: solid 0.1px rgb(195, 192, 192);
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 10px;
+}
+
+.form-container.sign-in form {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+    background-color: #fff;
+    transition: all 0.6s ease-in-out;
+
+}
+
+.form-container.sign-up form{
+    position: absolute;
+    left: 0%;
+    width: 50%;
+    height: 100%;
+    z-index: 0;
+    transition: all 0.6s ease-in-out;
+    background-color: #fff;
+
+}
+.container.active .sign-up form{
+    transform: translateX(100%);
+    z-index: 1;
+}
+.container.active .sign-in form{
+    transform: translateX(100%);
+    z-index: 0;
+}
+
+form input {
+    padding: 10px;
+    width: 80%;
+    background: transparent;
+    border: 0.1px solid #011a65;
+    border-radius: 10px;
+}
+
+form input::placeholder {
+    color: #020c5b;
+}
+
+form button {
+    color: #fff;
+    background: #000511;
+    padding: 10px;
+    border-radius: 10px;
+    width: 90%;
+    border: none;
+}
+
+form .title {
+    color: #010413;
+}
+
+.toggle-container {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    border-radius: 150px 0 0 120px;
+    z-index: 1000;
+}
+
+.container.active .toggle-container {
+    transform: translateX(-100%);
+    border-radius: 0 150px 120px 0;
+}
+
+.toggle {
+    background: linear-gradient(150deg, #010413, #0a3ac2);
+    position: relative;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.container.active .toggle {
+    transform: translateX(50%);
+}
+
+.toggle-panel {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+
+}
+
+
+.toggle-left {
+    transform: translateX(0%);
+}
+
+.container.active .toggle-left {
+    transform: translateX(0%);
+
+}
+
+.toggle-right {
+
+    transform: translateX(100%);
+}
+
+.container.active .toggle-right {
+
+    transform: translateX(100%);
+}
+
+.title-toggle{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+}
+.text-toggle{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+}
+.toggle-panel button{
+    padding:  10px;
+    width: 40%;
+    border-radius: 10px;
+    border: 0.1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+.subcol-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 60%;
+}
+
+.subcol-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 60%;
+    opacity: 0;
+}
+
+.title-login {
+    margin-top: 0;
+    color: white;
+    text-align: center;
+}
+
+.username-input,
+.password-input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 0.1px solid #fff;
+    background: transparent;
+    color: #fff;
+}
+
+.button-submit {
+    border-radius: 10px;
+    padding: 10px;
+    background: #000511;
+    color: #fff;
+}
+
+input::placeholder {
+    color: #fff;
+}
+
+.button-switch {
+    display: flex;
+    justify-content: center;
+}
+
+.button-switch button {
+    padding: 10px;
+}
+
+.button-switch .sign-in {
+    width: 100px;
+    border-radius: 10px 0 0 10px;
+    border: solid 0.1px white;
+    background: transparent;
+    color: #fff;
+    transition: 0.3s;
+
+}
+
+.button-switch .sign-up {
+    width: 100px;
+    border-radius: 0 10px 10px 0;
+    border: solid 0.1px white;
+    background: transparent;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.col-1 {
+    background: linear-gradient(45deg, #01041396, #5b87c8);
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 200px 100px 10px;
+}
+
+.col-2.active {
+    opacity: 1;
+    /* transform: translateX(100%); */
+    border-radius: 200px 10px 10px 100px;
+    background: linear-gradient(45deg, #01041396, #5b87c8);
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
